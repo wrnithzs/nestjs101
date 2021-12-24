@@ -8,7 +8,8 @@ import {
     Post,
     Put,
 } from '@nestjs/common';
-import {BookRequestDto} from "./dto/bookRequest.dto";
+import {BookRequest} from "./model/request/book-request.request";
+import {BookResponse} from "./model/response/book-response.interface";
 
 @Controller('books')
 export class BooksController {
@@ -18,16 +19,15 @@ export class BooksController {
     }
 
     @Post()
-    async create(@Body() bookRequestDto: BookRequestDto) {
-        console.log(' before Exception')
-        throw new ForbiddenException( );
+    async create(@Body() bookRequest: BookRequest): Promise<BookResponse> {
+        const data: BookResponse =  {author: "", id: 0, isRecommended: false, name: "", price: 0}
+        return data;
     }
 
     @Put(':id')
-    update(@Param('id', ParseIntPipe) id: number, @Body() bookRequestDto: BookRequestDto) {
-        console.log(typeof id)
-        console.log(bookRequestDto);
-        return bookRequestDto;
+    async update(@Param('id', ParseIntPipe) id: number, @Body() bookRequest: BookRequest) {
+        const data: BookResponse = {author: "", id: 0, isRecommended: false, name: "", price: 0}
+        return data;
     }
 
 }

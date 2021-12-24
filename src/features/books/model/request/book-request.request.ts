@@ -1,13 +1,11 @@
 import {IsNotEmpty} from "class-validator";
 
-export class BookRequestDto {
-
+export class BookRequest {
     @IsNotEmpty()
     name: string;
     @IsNotEmpty()
     author: string;
     @IsNotEmpty()
     price: number;
-    @IsNotEmpty()
-    is_recommended: boolean
+    isRecommended: boolean
 }

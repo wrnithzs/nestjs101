@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import {BookRequest} from "./request/book-request.interface";
-import {BookResponse} from "./response/book-response.interface";
+import {BookRequest} from "./model/request/book-request.request";
+import {BookResponse} from "./model/response/book-response.interface";
 
 @Injectable()
 export class BooksService {
