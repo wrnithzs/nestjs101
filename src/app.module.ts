@@ -1,7 +1,8 @@
 import {Module} from '@nestjs/common';
 import {BooksModule} from './features/books/books.module';
-import {TypeOrmModule } from '@nestjs/typeorm';
+import {TypeOrmModule} from '@nestjs/typeorm';
 import {Book} from "./features/books/entity/book.entity";
+
 @Module({
     imports: [
         TypeOrmModule.forRoot({
@@ -12,7 +13,7 @@ import {Book} from "./features/books/entity/book.entity";
             password: 'password',
             database: 'Book',
             entities: [Book],
-            synchronize: true,
+            synchronize: false,
         }),
         BooksModule],
     providers: [],

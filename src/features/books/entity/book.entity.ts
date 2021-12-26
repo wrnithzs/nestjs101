@@ -4,7 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Book {
 
     @PrimaryGeneratedColumn()
-    id: number
+    id: number;
 
     @Column()
     name: string;
@@ -16,5 +16,5 @@ export class Book {
     price: number;
 
     @Column({ default: true })
-    isRecommended: boolean
+    isRecommended: boolean;
 }

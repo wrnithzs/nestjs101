@@ -3,5 +3,5 @@ export interface BookResponse {
     name: string;
     author: string;
     price: number;
-    isRecommended: boolean
+    isRecommended: boolean;
 }
