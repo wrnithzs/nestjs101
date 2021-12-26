@@ -1,7 +1,6 @@
 import {
     Body,
     Controller,
-    ForbiddenException,
     Get,
     Param,
     ParseIntPipe,
@@ -20,7 +19,8 @@ export class BooksController {
 
     @Post()
     async create(@Body() bookRequest: BookRequest): Promise<BookResponse> {
-        const data: BookResponse =  {author: "", id: 0, isRecommended: false, name: "", price: 0}
+        const data: BookResponse =  {
+            author: "test", id: 0, isRecommended: false, name: "test", price: 0}
         return data;
     }
 
@@ -29,5 +29,4 @@ export class BooksController {
         const data: BookResponse = {author: "", id: 0, isRecommended: false, name: "", price: 0}
         return data;
     }
-
 }
