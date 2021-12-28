@@ -9,7 +9,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const status = exception.getStatus();
     console.log(exception.getResponse().message)
 
-    if(exception.getStatus() == 400){
+    if(status == 400){
         console.log(' in exception check')
       response
           .status(status)

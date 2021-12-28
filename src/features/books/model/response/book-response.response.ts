@@ -1,4 +1,4 @@
-export interface BookResponse {
+export class BookResponse {
     id: number;
     name: string;
     author: string;
